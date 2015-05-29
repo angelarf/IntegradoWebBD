@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+        background-color:#f4f7f7;
+	
+}
+
+
+#top, #bottom, #left, #right {
+	background: #14691b;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 30px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 30px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+#logo{
+	width:200px;
+        margin-left:20px;
+        float:left;
+		
+}
+
+header{
+    display:inline;
+}
+
+#txtFunc{
+	font-size:28px;	
+	font-weight:bold;
+        color:#ababab;
+        float:right;
+        
+}
+
+#buscaFunc{
+	font-size:28px;	
+	margin-left:250px;
+        float:left;
+        margin-top:40px;
+}
+
+#btPesquisa{
+    float:right;
+    margin-right:260px;
+    margin-top:20px;
+}
+
+#lupa{
+    width:30px;
+    height:30px;
+}
+
+button{
+    border:none;
+    background:none;
+    font-size:14px;
+    font-weight: bold;
+}
+
+#voltarBt{
+    width:200px;
+    height:100px;
+}
+
+
+
+#voltar {
+    width:60px;
+    height:60px;
+    margin-top:80px;
+}
+
+#formulario{
+    display:inline;
+    font-size:22px;
+    top:15px;
+    position:relative;
+    margin-left:100px;
+}
+
+form{
+    margin-top:40px;
+}
+
+input{
+    font-size:16px;
+}
+
+#grafico{
+    float:right;
+    margin-right:25px;
+}
+
+#graficoImg{
+    width:60px;
+    height:60px;
+}
+
+
+#resultados{
+    margin-top:50px;
+    margin-left:50px;
+}
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/04/2015, 20:17:18
+    Author     : monique
+*/
+

@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+        background-color:#f4f7f7;
+	
+}
+#corpo{
+    margin-left: 30px;
+    margin-right: 30px;
+    //border: #ababab solid;
+    height: 520px;
+}
+
+#top, #bottom, #left, #right {
+	background:#14691b;
+        position: fixed;
+        }
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 30px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 30px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
+#logo{
+	width:500px;
+	margin-top:60px;
+	margin-left:35%;
+        //margin-right: 35%;
+}
+
+#txtDesc{
+    //border-style: solid;
+    font-size:24px;	
+    //font-weight:bolder;
+    width:850px;
+    color:#ababab;
+    margin-top: 50px;
+    margin-left:220px;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    padding: 0px; 
+    text-align: center;
+}
+#inProg {
+    width:400px;
+    font-size: 20px;
+    vertical-align: middle;
+    float: left;
+    border-color: #FFFFFF;
+    border-style: none;
+    margin-left: 5px;
+    padding-right: 5px;
+    outline: none;
+    line-height: 42px;
+}
+.inputBusca {
+    width:570px;
+    font-size: 20px;
+    vertical-align: central;
+    float: left;
+    border-color: #FFFFFF;
+    border-style: none;
+    margin-left: 5px;
+    padding-right: 5px;
+    outline: none;
+    line-height: 42px;
+}
+
+#valorLim{
+    width: 185px;
+    font-size: 20px;
+    vertical-align: middle;
+    float: left;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-left: #ababab solid 2px;
+    margin-top: 10px;
+    padding-left: 10px;
+    outline: none;
+}
+#selectMes{
+    width: 185px;
+    font-size: 20px;
+    vertical-align: central;
+    float: left;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-left: #ababab solid 2px;
+    margin-top: 10px;
+    padding-left: 10px;
+    outline: none;
+}
+#ordenacao{
+    width: 170px;
+    font-size: 20px;
+    vertical-align: central;
+    float: left;
+    border-bottom-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-left: #ababab solid 2px;
+    margin-top: 10px;
+    padding-left: 10px;
+    outline: none;
+    color: #ababab;
+}
+.option{
+    font-size: 18px;
+    color:black;
+}
+
+#buscaDom{
+    width:850px;
+    margin-left:220px;
+    float:left;
+    border: #ababab solid 2px;
+    height: 45px;
+    background: #FFFFFF;
+}
+
+#btPesquisa{
+    float:right;
+}
+
+#lupa{
+    //border: #14691b solid 1px;
+    float: right;
+    //width:40px;
+    height:45px;
+}
+button{
+    border:none;
+    background:none;
+    font-size:16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#opcoes{
+    height: 90px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    //border: #E0A3AA dotted medium;
+}
+
+#voltarBt{
+    height: 100%;
+    width: 80px;
+    //border:#000099 solid 1px;
+    float: left;
+    //margin-bottom: 2px;
+    text-align: center;
+}
+
+#voltar {
+    width:70px;
+    height:60px;
+    float: left;
+    //border:#ababab solid;
+
+}
+/*
+#voltar, a {
+    width:60px;
+    height:60px;
+    margin-top:80px;
+}*/
