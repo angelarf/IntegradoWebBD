@@ -7,11 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../css/busca.css"> 
         <title>Busca por domínio </title>
         <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
-        <script>
-            function validaform(){
-                return true;
-            }
-        </script>
+        
         
     </head>
     <body>
@@ -25,7 +21,7 @@
 
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaDom" method="post" onsubmit=" return validaform()">
+            <form name="buscaDom" method="post" onsubmit=" ">
                 <div id="buscaDom">
                     <input class="inputBusca" title="Nome do Domínio" size="62" placeholder="Nome do Domínio" autofocus="on" required="required"/>
                     <input id ="valorLim" size="13" title="Valor Mínimo" placeholder="Valor Mínimo" type="number" min="0"/>
