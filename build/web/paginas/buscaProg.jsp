@@ -9,9 +9,42 @@
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 
         <script>
-            $(document).ready(function(){
-                $('#ordenacao').on('change', function(){
-                    if (this.value !== 'nothing' ) {
+            function verificaForm()
+            {
+                if ($("#inProg").val() === "")
+                {
+                    alert("Por favor, preencha o campo \"Nome do dominio\"");
+                    return false;
+                }
+                if ($("#valorLim").val() == "")
+                {
+                    alert("Por favor, preencha o campo \"Valor minimo\"");
+                    return false;
+                }
+                if ($("#valorLim").val() < 0)
+                {
+                    alert("O valor do campo \"Valor minimo\" não pode ser negativo");
+                    return false;
+                }
+                return true;
+            }
+            function enviaConsulta() 
+            {
+                alert($("#opcaoOrdenacao").val());
+            }
+
+            
+            $(document).ready(function()
+            {
+                $("#btPesquisa").click(function()
+                {
+                    if (verificaForm()) enviaConsulta();
+                });
+                
+                $('#ordenacao').on('change', function()
+                {
+                    if (this.value !== 'nothing' ) 
+                    {
 //                        console.log(this.value);
                         this.style.color="black";
                     }
@@ -32,12 +65,12 @@
 
             <form name="buscaProg" method="post">
                 <div id="buscaDom">  
-                    <input id="inProg" title="Nome do dominio que deseja ver o gasto total dos programas" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on" required="required"/>
-                    <input id ="valorLim" size="13" title="Valor Mínimo" placeholder="Valor Mínimo" type="number" min="0"/>
+                    <input id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
+                    <input id ="valorLim" size="13" placeholder="Valor Mínimo"/>
                     <select id ="ordenacao" title="Selecione a Ordenação">
                         <option value="nothing" disabled selected>Ordenar por:</option>
                          
-                        <optgroup name="ord" >
+                        <optgroup name="ord" id = "opcaoOrdenacao" >
                             <option value="Programas" class="option">Programas</option>
                             <option value="Gastos" class="option">Gastos</option>
                         </optgroup>
