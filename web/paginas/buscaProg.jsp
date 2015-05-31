@@ -11,26 +11,39 @@
         <script>
             function verificaForm()
             {
-                if ($("#inProg").val() === "")
+                if ($.trim($("#inProg").val()).length == 0)
                 {
-                    alert("Por favor, preencha o campo \"Nome do dominio\"");
+                    alert("Por favor, preencha o campo \"Nome do dominio\".");
                     return false;
                 }
                 if ($("#valorLim").val() == "")
                 {
-                    alert("Por favor, preencha o campo \"Valor minimo\"");
+                    alert("Por favor, preencha o campo \"Valor minimo\".");
                     return false;
                 }
                 if ($("#valorLim").val() < 0)
                 {
-                    alert("O valor do campo \"Valor minimo\" não pode ser negativo");
+                    alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
+                    return false;
+                }
+                if (!$.isNumeric($("#valorLim").val()))
+                {
+                    alert("O valor do campo \"Valor minimo\" deve ser numérico.");
+                    return false;
+                }
+                if ($("#ordenacao").val() == null)
+                {
+                    alert("Por favor, selecione uma opção de ordenação.");
                     return false;
                 }
                 return true;
             }
             function enviaConsulta() 
             {
-                alert($("#opcaoOrdenacao").val());
+                var inputNome = $("#inProg").val();
+                var valorLimite = $("#valorLim").val();
+                var opcaoOrdenacao = $("#ordenacao").val();
+                alert(opcaoOrdenacao);
             }
 
             
@@ -70,7 +83,7 @@
                     <select id ="ordenacao" title="Selecione a Ordenação">
                         <option value="nothing" disabled selected>Ordenar por:</option>
                          
-                        <optgroup name="ord" id = "opcaoOrdenacao" >
+                        <optgroup name="ord">
                             <option value="Programas" class="option">Programas</option>
                             <option value="Gastos" class="option">Gastos</option>
                         </optgroup>

@@ -7,9 +7,33 @@
         <link rel="stylesheet" type="text/css" href="../css/busca.css"> 
         <title>Gasto Mensal Subdominio</title>
         <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
+        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         
         <script>
+            function verificaForm()
+            {
+                if ($.trim($("#inputNome").val()).length == 0)
+                {
+                    alert("Por favor, preencha o campo \"Nome do subdominio\".");
+                    return false;
+                }
+                return true;
+            }
+            function enviaConsulta() 
+            {
+                var inputNome = $("#inputNome").val();
+                var mesDesejado = $("#selectMes").val();
+                alert("Deu certo");
+            }
+
             
+            $(document).ready(function()
+            {
+                $("#btPesquisa").click(function()
+                {
+                    if (verificaForm()) enviaConsulta();
+                });
+            });
         </script>
         
     </head>
@@ -23,7 +47,7 @@
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
             <form name="buscaSub" method="post" onsubmit="return validaform()">
                 <div id="buscaDom">
-                    <input class="inputBusca" title="Nome do Subdomínio" size="62" placeholder="Nome do Subdomínio" autofocus="on" required="required"/>
+                    <input class="inputBusca" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on"/>
                     <select id="selectMes" title="Dados referentes a 2014">
                         <optgroup name="mes" label="Meses">
                             <option class="option">Janeiro</option>
