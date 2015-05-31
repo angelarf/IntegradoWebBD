@@ -9,7 +9,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         
-        <script>
+       < <script>
             function verificaForm()
             {
                 if ($.trim($("#inputNome").val()).length == 0)
@@ -38,7 +38,7 @@
             {
                 var inputNome = $("#inputNome").val();
                 var valorLimite = $("#valorLim").val();
-                alert(inputNome + " " + valorLimite);
+                alert("Deu certo.");
             }
 
             
@@ -64,13 +64,13 @@
 
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaDom" method="post" onsubmit=" ">
+            <!-- <form name="buscaDom" method="post" onsubmit=" "> -->
                 <div id="buscaDom">
                     <input id = "inputNome" class="inputBusca" size="62" placeholder="Nome do Domínio" autofocus="on"/>
                     <input id ="valorLim" size="13" placeholder="Valor Mínimo"/>
                     <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
-            </form>
+            <!-- </form> -->
         </article>
         <article id="opcoes">
              <a href="../index.jsp">

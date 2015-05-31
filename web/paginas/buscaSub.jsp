@@ -45,7 +45,7 @@
         <div id="bottom"></div>
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaSub" method="post" onsubmit="return validaform()">
+            <!-- <form name="buscaSub" method="post" onsubmit="return validaform()"> --> 
                 <div id="buscaDom">
                     <input class="inputBusca" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on"/>
                     <select id="selectMes" title="Dados referentes a 2014">
@@ -66,7 +66,7 @@
                     </select>
                     <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
-           </form>
+           <!-- /form> -->
 
         </article>
         <article id="opcoes">

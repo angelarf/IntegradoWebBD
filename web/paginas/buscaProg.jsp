@@ -43,7 +43,7 @@
                 var inputNome = $("#inProg").val();
                 var valorLimite = $("#valorLim").val();
                 var opcaoOrdenacao = $("#ordenacao").val();
-                alert(opcaoOrdenacao);
+                alert("Deu certo.");
             }
 
             
@@ -76,7 +76,7 @@
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
 
-            <form name="buscaProg" method="post">
+            <!-- <form name="buscaProg" method="post"> -->
                 <div id="buscaDom">  
                     <input id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
                     <input id ="valorLim" size="13" placeholder="Valor Mínimo"/>
@@ -91,7 +91,7 @@
                     
                     <button id="btPesquisa" type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
-            </form>
+            <!-- </form> -->
 
         </article>
         <article id="opcoes">
