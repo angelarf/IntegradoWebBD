@@ -8,24 +8,37 @@
     </head>
     <body>
         <article id="corpo">
-        <div id="left"></div>
-        <div id="right"></div>
-        <div id="top"></div>
-        <div id="bottom"></div>
-        
-        <header>
-            <img id="logo" src="../imagens/logo.png"/>
-            <a href="../index.jsp"><button id="grafico"><img id="graficoImg" src="../imagens/grafico.png"/><br>Ver graficos</button></a>
-            <form>
-                <input id="buscaFunc" size="58" placeholder="Digite sua busca por domínios | subdomínios"/>
-                <button id="btPesquisa"  onclick="window.location.href='../index.jsp'"><img id="lupa" src="../imagens/search-icon.png" /></button>
-            </form>
+            <header>
+                <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
+                
+                <form name="buscaDom" method="post" onsubmit=" ">
+                    <div id="buscaDom">
+                        <input class="inputBusca" title="Nome do Domínio" size="62" placeholder="Nome do Domínio" autofocus="on" required="required"/>
+                        <input id ="valorLim" size="13" title="Valor Mínimo" placeholder="Valor Mínimo" type="number" min="0"/>
+                        <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
+                    </div>
+                </form>
+   
+            </header>
+             
             
-        </header>
+            <div id="caminho">
+                <a href="../index.jsp">Ínicio</a>> <a href="pagDominio.jsp">Busca por Dominio</a>>
+            </div>
+            
+            <article id="resultados">
+              
+            </article>
+            <div id="opcoes">
+                <a href="../index.jsp">
+                     <button id="voltarBt">
+                        <img id="voltar" src="../imagens/home.png"/>
+                        Voltar
+                     </button>
+                     <a href="../index.jsp"><button id="grafico"><img id="graficoImg" src="../imagens/grafico.png"/><br>Ver gráficos</button></a>
+                </a>
+            </div>
         </article>
-        </article>
-        <article id="resultados">
-            <a href="../index.jsp">Ínicio</a>><a href="pagAvancada.jsp">Busca por Dominio | Subdominio</a>>
-        </article>
+
     </body>
 </html>
