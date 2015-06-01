@@ -4,7 +4,9 @@
      <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="../css/resultadoCss.css"> 
-        <title>JSP Page</title>
+        <title>Resultados Domínio</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
+ 
     </head>
     <body>
         <article id="corpo">
@@ -26,18 +28,55 @@
                 <a href="../index.jsp">Ínicio</a>> <a href="pagDominio.jsp">Busca por Dominio</a>>
             </div>
             
-            <article id="resultados">
-              
-            </article>
-            <div id="opcoes">
-                <a href="../index.jsp">
-                     <button id="voltarBt">
-                        <img id="voltar" src="../imagens/home.png"/>
-                        Voltar
-                     </button>
-                     <a href="../index.jsp"><button id="grafico"><img id="graficoImg" src="../imagens/grafico.png"/><br>Ver gráficos</button></a>
-                </a>
+            
+            <a href="../index.jsp">
+                 <button id="voltarBt">
+                    <img id="voltar" src="../imagens/home.png"/>
+                    Voltar
+                 </button>
+            </a>
+            <div id="resultados">
+                <table>
+                    <tr>
+                        <th>Programa do Domínio</th><th>Gasto</th>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 1 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 2 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 3 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 4 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 5 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 6 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 7 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 8 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 9 de teste </td><td>Gasto</td>
+                    </tr>
+                    <tr>
+                        <td id="nomeprog"> Programinha 10 de teste </td><td>Gasto</td>
+                    </tr>
+                </table>
+                <div id="paginacao">
+                   espaço pra colocar os bang de paginaçao
+                </div>
             </div>
+
+            <a href="../index.jsp"><button id="grafico"><img id="graficoImg" src="../imagens/grafico.png"/><br>Ver Gráficos</button></a>
         </article>
 
     </body>
