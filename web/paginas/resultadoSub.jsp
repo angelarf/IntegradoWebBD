@@ -57,7 +57,10 @@
                         //System.out.println("oobaa"+users.isEmpty());
                         if(s_list.isEmpty()) {
                 %>
-                            <p>Nenhum resultado</p>
+                            <div id="noresults">
+                                <p>Nenhum resultado para exibir <b style="color: green">:(</b></p>
+                                <p>Tente uma nova consulta</p>
+                            </div>
                 <%
                           } else {
                 %>

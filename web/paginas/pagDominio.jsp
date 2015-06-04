@@ -64,13 +64,13 @@
 
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <!-- <form name="buscaDom" method="post" onsubmit=" "> -->
+            <form name="buscaDom" method="get" onsubmit=" " action="../buscaDominio"> <!---->
                 <div id="buscaDom">
-                    <input id = "inputNome" class="inputBusca" size="62" placeholder="Nome do Domínio" autofocus="on"/>
-                    <input id ="valorLim" size="13" placeholder="Valor Mínimo"/>
+                    <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on"/>
+                    <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo"/>
                     <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
-            <!-- </form> -->
+             </form> <!---->
         </article>
         <article id="opcoes">
              <a href="../index.jsp">

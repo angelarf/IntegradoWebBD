@@ -1,3 +1,4 @@
+package model;
 
 public class ProgramaBean {
   private String nomePrograma;

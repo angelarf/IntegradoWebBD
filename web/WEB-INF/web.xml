@@ -4,9 +4,25 @@
         <servlet-name>buscaSubdominio</servlet-name>
         <servlet-class>controllers.buscaSubdominio</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>buscaDominio</servlet-name>
+        <servlet-class>controllers.buscaDominio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>buscaPrograma</servlet-name>
+        <servlet-class>controllers.buscaPrograma</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>buscaSubdominio</servlet-name>
         <url-pattern>/buscaSubdominio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>buscaDominio</servlet-name>
+        <url-pattern>/buscaDominio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>buscaPrograma</servlet-name>
+        <url-pattern>/buscaPrograma</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

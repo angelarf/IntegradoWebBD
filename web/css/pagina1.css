@@ -1,140 +1,64 @@
-@charset "utf-8";
-/* CSS Document */
+OQ FALTA:
 
-#corpo {
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;	
-	margin:0;
-	padding:0;
-        background-color:#f4f7f7
-}
-
-
-#cabeca {
-	width:100%;
-	height:90px;
-        background-color:#2F9B45;
-}
+--- Arrumar descrição nas páginas de busca
+--- Arrumar css - para % (no caso da resolução do projetor)
+--- Verificações + forms (corrigir alguns detalhes, ex: "Deu Certo", ver o tipo de envio. Colocar verificação nas páginas de retorno)
+--- Gerar paginação
+--- Gerar Gráficos (Oq vai ter gráfico?)
+--- Otimizar as Consultas
+--- Arrumar Relatório de LabBD
+--- Se possível, deixar responsivo.
 
 
-#logo {
-	//width:25%;
-	height:90px;
-	position:relative;
-}
+--OBSERVAÇÕES PARA FUNCIONAR:
+Banco de Dados deve se chamar DAG. Se sua senha não for "senha" troque no ConnectionFactory e nos avise hehe
+Consulta por subdominio: Procedure deve estar no BD e se chamar consulta1
+Consulta por dominio: Criar a procedure: consultaDominio().
+Consulta por progrma: Procedure deve estar criada no BD e se chamar consulta2
 
-#cabeca a {
-	margin-left:60%;
-	position:relative;
-	margin:10px;
-	font-size:20px;
-	text-decoration:none;
-		
-}
-a {
-	text-decoration:none;
-}
-
-#index {
-	text-decoration:line-through;
-	color:	#000000		;
+-------QUERYS ATUALIZADAS:
 	
-}
+CREATE OR REPLACE FUNCTION ConsultaDominio(descricao text, val NUMERIC) RETURNS TABLE (nomePrograma VARCHAR, gasto NUMERIC) AS $$
+DECLARE 
+	descr varchar = '%' || descricao || '%';
+BEGIN
+RETURN QUERY
+	select descricaointernamunicipio, valor 
+	from programa p,(
+		select codigoprograma, valor 
+		from despesa de, dominio dom 
+		where valor >= val 
+		and dom.descricao ILIKE descr 
+		and dom.codigo = de.codigodominio
+		) AS parcial
+	 where parcial.codigoprograma = p.codigo;
+END;
+$$ LANGUAGE plpgsql;
 
-#circulo {
-	width:145px;
-	margin-left:43.3%; 
-	position:relative;	
-}
-
-h1{
-	text-align:center;	
-	font-size:30px;
-	margin-top:20px;
-	position:relative;
-}
-
-.box{
-    margin-left:22%;
-    margin-right:22%;
-    width: 55%;
-    height:110px;
-    border-radius:20px;
-    padding-left: 12px;
-    position: relative;
-}
-#dominio{
-    background-color:#fbf794;
-}
-
-#subdominio {
-    background-color:#fbcd94;
-    margin-top:20px;
-        
-}
-
-#programa{
-    background-color:#E0A3AA;
-    margin-top:20px;
-}
-
-#imagem {
-    height: 85%;
-    float:right;
-    margin-right:2%;
-    margin-top:1%;
-    margin-bottom: 1%;
-    position: relative;
-    //border-style: solid;
-}
-
-#legenda{
-	font-size:80%;
-        font-size-adjust: 0.4;
-        font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	color:#5B5B5B;
-        float:left;
-        margin-left:10px;
-        //border-style: dashed;
-        width: 60%;
-}
-
-#texto{
-        font-size-adjust: 0.4;
-	font-size:45px;	
-        //text-align: center;
-	font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	font-weight:bold;
-	color:#5B5B5B;
-        float:left;
-        margin-left:10px;
-        margin-top:7px;
-        //height: 50px;
-        width: 60%;
-        //border-style: double;
-}
-
-#texto2{
-	font-size:40px;	
-	font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	font-weight:bold;
-	color:#5B5B5B;
-        float:left;
-        margin-left:15px;
-        width:290px;
-}
-
-
-footer{
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:40px; 
-   background-color:#2F9B45;
-   font-size:18px;
-   font-weight: bold; 
-   text-align:center;
-   padding-top:10px;
-}
-
-
-
+CREATE OR REPLACE FUNCTION Consulta2(codDom INTEGER, lim NUMERIC, opcOrdem VARCHAR) RETURNS TABLE (descricao VARCHAR, total NUMERIC) AS $$
+BEGIN
+	IF opcOrdem = 'programas' THEN
+		RETURN QUERY 
+		SELECT descricaointernamunicipio, sum 
+		FROM programa, (SELECT codigoprograma, sum(valor) 
+				FROM despesa de, dominio d 
+				WHERE d.codigo = de.codigodominio 
+				AND d.codigo = codDom
+				GROUP BY codigoprograma 
+				HAVING sum(valor) > lim) result 
+		WHERE programa.codigo = result.codigoprograma 
+		ORDER BY descricaointernamunicipio;
+	ELSE 
+		RETURN QUERY 
+		SELECT descricaointernamunicipio, sum 
+		FROM programa, (SELECT codigoprograma, sum(valor) 
+				FROM despesa de, dominio d 
+				WHERE d.codigo = de.codigodominio 
+				AND d.codigo = codDom
+				GROUP BY codigoprograma 
+				HAVING sum(valor) > lim) result 
+		WHERE programa.codigo = result.codigoprograma 
+		ORDER BY sum DESC;
+	END IF;
+END;
+$$ LANGUAGE plpgsql;

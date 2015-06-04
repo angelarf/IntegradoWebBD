@@ -76,11 +76,11 @@
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
 
-            <!-- <form name="buscaProg" method="post"> -->
+            <form name="buscaProg" method="get" action="../buscaPrograma"> <!---->
                 <div id="buscaDom">  
-                    <input id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
-                    <input id ="valorLim" size="13" placeholder="Valor Mínimo"/>
-                    <select id ="ordenacao" title="Selecione a Ordenação">
+                    <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
+                    <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>
+                    <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação">
                         <option value="nothing" disabled selected>Ordenar por:</option>
                          
                         <optgroup name="ord">
@@ -91,7 +91,7 @@
                     
                     <button id="btPesquisa" type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
-            <!-- </form> -->
+            </form> <!---->
 
         </article>
         <article id="opcoes">
