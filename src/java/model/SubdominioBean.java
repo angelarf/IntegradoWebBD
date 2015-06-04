@@ -16,7 +16,10 @@ public class SubdominioBean {
   public Float getGastoTotal() {
     return this.gastoTotal;
   }
+  public void setGastoTotal(Float valor) {
+    this.gastoTotal = valor;
+  }  /*
   public void setType(Float valor) {
     this.gastoTotal = valor;
-  }
+  }*/
 }
