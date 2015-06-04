@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+#corpo {
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;	
+	margin:0;
+	padding:0;
+        background-color:#f4f7f7
+}
+
+
+#cabeca {
+	width:100%;
+	height:90px;
+        background-color:#2F9B45;
+}
+
+
+#logo {
+	//width:25%;
+	height:90px;
+	position:relative;
+}
+
+#cabeca a {
+	margin-left:60%;
+	position:relative;
+	margin:10px;
+	font-size:20px;
+	text-decoration:none;
+		
+}
+a {
+	text-decoration:none;
+}
+
+#index {
+	text-decoration:line-through;
+	color:	#000000		;
+	
+}
+
+#circulo {
+	width:145px;
+	margin-left:43.3%; 
+	position:relative;	
+}
+
+h1{
+	text-align:center;	
+	font-size:30px;
+	margin-top:20px;
+	position:relative;
+}
+
+.box{
+    margin-left:22%;
+    margin-right:22%;
+    width: 55%;
+    height:110px;
+    border-radius:20px;
+    padding-left: 12px;
+    position: relative;
+}
+#dominio{
+    background-color:#fbf794;
+}
+
+#subdominio {
+    background-color:#fbcd94;
+    margin-top:20px;
+        
+}
+
+#programa{
+    background-color:#E0A3AA;
+    margin-top:20px;
+}
+
+#imagem {
+    height: 85%;
+    float:right;
+    margin-right:2%;
+    margin-top:1%;
+    margin-bottom: 1%;
+    position: relative;
+    //border-style: solid;
+}
+
+#legenda{
+	font-size:80%;
+        font-size-adjust: 0.4;
+        font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	color:#5B5B5B;
+        float:left;
+        margin-left:10px;
+        //border-style: dashed;
+        width: 60%;
+}
+
+#texto{
+        font-size-adjust: 0.4;
+	font-size:45px;	
+        //text-align: center;
+	font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:bold;
+	color:#5B5B5B;
+        float:left;
+        margin-left:10px;
+        margin-top:7px;
+        //height: 50px;
+        width: 60%;
+        //border-style: double;
+}
+
+#texto2{
+	font-size:40px;	
+	font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:bold;
+	color:#5B5B5B;
+        float:left;
+        margin-left:15px;
+        width:290px;
+}
+
+
+footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px; 
+   background-color:#2F9B45;
+   font-size:18px;
+   font-weight: bold; 
+   text-align:center;
+   padding-top:10px;
+}
+
+
+
