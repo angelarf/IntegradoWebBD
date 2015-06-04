@@ -19,11 +19,19 @@ public class ConnectionFactory {
   
   public static Connection getConnection() throws DAOException {
     try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            /*Class.forName("com.mysql.jdbc.Driver").newInstance();
             String connection="jdbc:mysql://localhost/ride";
             String user="root", password="senha";
+              */
+            Class.forName("org.postgresql.Driver").newInstance();
+            
+            Connection conn = DriverManager.getConnection("jdbc:postgresql:" +
+                    "//localhost/DAG?user=postgres&password=senha");
 
-            Connection conn = DriverManager.getConnection(connection, user, password);
+            //Cria um comando (statement) vinculado aa conexao
+            //stmt = conn.createStatement();
+            
+            //Connection conn = DriverManager.getConnection(connection, user, password);
             
             return conn;
     } catch (SQLException exception) {

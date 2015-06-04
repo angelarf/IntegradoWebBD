@@ -45,11 +45,12 @@
         <div id="bottom"></div>
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaSub" method="get" onsubmit="return validaform()" action="/buscaSubdominio"> <!--!--> 
+            <!--form name="buscaSub" method="get" onsubmit="return validaform()" action="/buscaSubdominio"> <!--!--> 
+            <form method='get' action="../buscaSubdominio">
                 <div id="buscaDom">
                     <input class="inputBusca" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on" name="inputNome"/>
-                    <select id="selectMes" title="Dados referentes a 2014">
-                        <optgroup name="mes" label="Meses">
+                    <select id="selectMes" name='mes' title="Dados referentes a 2014">
+                        <optgroup label="Meses">
                             <option value=1 class="option">Janeiro</option>
                             <option value=2 class="option">Fevereiro</option
                             <option value=3 class="option">Março</option>

@@ -20,19 +20,20 @@ public class SubdominioDAO {
 
   public ArrayList buscarSubdominioPorMes(String subdominio, int mes) throws SQLException {
     
+    //System.out.println("sub: "+ subdominio);
     ArrayList<SubdominioBean> sub_list = new ArrayList<SubdominioBean>();
     ResultSet r;
     PreparedStatement statement;
     String SQL = "select * from Consulta1('" +subdominio+ "'," +mes+");";
-
+ 
     statement = connection.prepareStatement(SQL);
     r = statement.executeQuery();
   
     while(r.next()) {
         SubdominioBean s = new SubdominioBean();
         s = new SubdominioBean();
-        s.setName(r.getString("descricao"));
-        s.setGastoTotal(r.getFloat("total"));
+        s.setName(r.getString("nome"));
+        s.setGastoTotal((r.getFloat("total")));
         sub_list.add(s);
     }
     

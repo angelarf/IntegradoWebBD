@@ -64,26 +64,31 @@ public class buscaSubdominio extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
     
         try {
             SubdominioDAO sdao = new SubdominioDAO();
             ArrayList s_list;
   
-            String subdom = request.getParameter("city");
-            String mes = request.getParameter("mes");
+            String subdom = request.getParameter("inputNome");
+            //System.out.println(subdom);
+            String m = request.getParameter("mes");
+            int mes = Integer.valueOf(m);
             
-            s_list = sdao.buscarSubdominioPorMes(subdom, 2); //ARRUMAR
+            s_list = sdao.buscarSubdominioPorMes(subdom, mes); //ARRUMAR
             
             request.setAttribute("s_list", s_list);
 
             RequestDispatcher d = null;
-            d = request.getRequestDispatcher("/resultadoSub.jsp");
+            d = request.getRequestDispatcher("/paginas/resultadoSub.jsp");
             d.forward(request, response);
         } catch (DAOException exception) {
+            System.out.println("DAO Exception");
           //Logger.getLogger(GetUsers.class.getName()).log(Level.SEVERE, null, exception);
           throw new ServletException(exception.getMessage());
         } catch (SQLException exception) {
+            
+            System.out.println("SQL Exception");
           //Logger.getLogger(GetUsers.class.getName()).log(Level.SEVERE, null, exception);
           throw new ServletException(exception.getMessage());
         }
