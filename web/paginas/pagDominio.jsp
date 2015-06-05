@@ -38,7 +38,6 @@
             {
                 var inputNome = $("#inputNome").val();
                 var valorLimite = $("#valorLim").val();
-                alert("Deu certo.");
             }
 
             
@@ -76,7 +75,7 @@
              <a href="../index.jsp">
                  <button id="voltarBt">
                     <img id="voltar" src="../imagens/home.png"/>
-                    Voltar
+                    Home
                  </button>
              </a>
         </article>

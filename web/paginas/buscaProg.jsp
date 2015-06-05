@@ -43,7 +43,6 @@
                 var inputNome = $("#inProg").val();
                 var valorLimite = $("#valorLim").val();
                 var opcaoOrdenacao = $("#ordenacao").val();
-                alert("Deu certo.");
             }
 
             
@@ -95,7 +94,7 @@
 
         </article>
         <article id="opcoes">
-            <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Voltar</button></a>
+            <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>
         </article>
     </body>
 </html>

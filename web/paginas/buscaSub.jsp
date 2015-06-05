@@ -23,7 +23,6 @@
             {
                 var inputNome = $("#inputNome").val();
                 var mesDesejado = $("#selectMes").val();
-                alert("Deu certo");
             }
 
             
@@ -71,7 +70,7 @@
 
         </article>
         <article id="opcoes">
-            <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Voltar</button></a>
+            <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>
         </article>
     </body>
 </html>
