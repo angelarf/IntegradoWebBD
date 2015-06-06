@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="model.DominioBean"%>
+<%@page import="java.text.DecimalFormat"%>;
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
@@ -39,6 +40,8 @@
             </a>
             <div id="resultados">
                 <%
+                        DecimalFormat df = new DecimalFormat("#.00");
+                        df.setMaximumFractionDigits(2);
                         ArrayList<DominioBean> d_list = (ArrayList<DominioBean>)request.getAttribute("d_list");
                         //System.out.println("oobaa"+users.isEmpty());
                         if(d_list.isEmpty()) {
@@ -61,7 +64,7 @@
                             for(i=0; i < 10; i++){//GAMBIS
                                 d = d_list.get(i);
                             %><tr>
-                                <td id="nomeprog"> <%= d.getNomePrograma()%> </td><td> <%= d.getGasto()%></td>
+                                <td id="nomeprog"> <%= d.getNomePrograma()%> </td><td> <%= df.format(d.getGasto())%></td>
                             </tr>
                             <% } %>
                         </table>

@@ -1,6 +1,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="model.SubdominioBean"%>
+<%@page import="java.text.DecimalFormat"%>;
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
@@ -53,6 +54,8 @@
 
             <div id="resultados">
                 <%
+                        DecimalFormat df = new DecimalFormat("#.00");
+                        df.setMaximumFractionDigits(2);
                         ArrayList<SubdominioBean> s_list = (ArrayList<SubdominioBean>)request.getAttribute("s_list");
                         //System.out.println("oobaa"+users.isEmpty());
                         if(s_list.isEmpty()) {
@@ -71,7 +74,7 @@
                             <%
                             for(SubdominioBean s: s_list){
                             %><tr>
-                                <td id="nomeprog"> <%= s.getName()%> </td><td> <%= s.getGastoTotal()%></td>
+                                <td id="nomeprog"> <%= s.getName()%> </td><td> <%= df.format(s.getGastoTotal())%></td>
                             </tr>
                             <% } %>
                         </table>
