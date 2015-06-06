@@ -11,13 +11,35 @@
         <title>Resultados Subdomínio</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        
+        <script>
+            function verificaForm()
+            {
+                if ($.trim($("#inputNome").val()).length == 0)
+                {
+                    alert("Por favor, preencha o campo \"Nome do subdominio\".");
+                    return false;
+                }
+                return true;
+            }
+            /*function enviaConsulta() 
+            {
+                var inputNome = $("#inputNome").val();
+                var mesDesejado = $("#selectMes").val();
+                
+            }*/
+
+           /* $(document).ready(function()
+            {
+            });*/
+        </script>
 
     </head>
     <body>
         <article id="corpo">
             <header>
                 <img id="logo" src="imagens/logo.png"/>
-                <form name="buscaProg" method="get" onsubmit=" " action="buscaSubdominio">
+                <form name="buscaSub" method="get" onsubmit="return verificaForm()" action="buscaSubdominio"> <!--!--> 
                     <div id="buscaDom">
                         <input class="inputBusca" name="inputNome" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on"/>
                         <select name="mes" id="selectMes" title="Dados referentes a 2014">

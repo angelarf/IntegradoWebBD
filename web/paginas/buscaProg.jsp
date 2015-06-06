@@ -38,20 +38,20 @@
                 }
                 return true;
             }
-            function enviaConsulta() 
+            /*function enviaConsulta() 
             {
                 var inputNome = $("#inProg").val();
                 var valorLimite = $("#valorLim").val();
                 var opcaoOrdenacao = $("#ordenacao").val();
-            }
+            }*/
 
             
             $(document).ready(function()
             {
-                $("#btPesquisa").click(function()
+                /*$("#btPesquisa").click(function()
                 {
                     if (verificaForm()) enviaConsulta();
-                });
+                });*/
                 
                 $('#ordenacao').on('change', function()
                 {
@@ -75,7 +75,7 @@
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
 
-            <form name="buscaProg" method="get" action="../buscaPrograma"> <!---->
+            <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
                 <div id="buscaDom">  
                     <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
                     <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>

@@ -9,7 +9,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         
-       < <script>
+        <script>
             function verificaForm()
             {
                 if ($.trim($("#inputNome").val()).length == 0)
@@ -34,7 +34,7 @@
                 }
                 return true;
             }
-            function enviaConsulta() 
+            /*function enviaConsulta() 
             {
                 var inputNome = $("#inputNome").val();
                 var valorLimite = $("#valorLim").val();
@@ -43,11 +43,7 @@
             
             $(document).ready(function()
             {
-                $("#btPesquisa").click(function()
-                {
-                    if (verificaForm()) enviaConsulta();
-                });
-            });
+            });*/
             
         </script>
         
@@ -63,10 +59,10 @@
 
             <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
             <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaDom" method="get" onsubmit=" " action="../buscaDominio"> <!---->
+            <form name="buscaDom" method="get" onsubmit=" return verificaForm()" action="../buscaDominio"> <!---->
                 <div id="buscaDom">
                     <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on"/>
-                    <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo"/>
+                    <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
                     <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                 </div>
              </form> <!---->

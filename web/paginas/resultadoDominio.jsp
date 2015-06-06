@@ -14,6 +14,31 @@
         <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js"></script>
         <script type="text/javascript" charset="utf-8">
+                 function verificaForm()
+                {
+                    if ($.trim($("#inputNome").val()).length == 0)
+                    {
+                        alert("Por favor, preencha o campo \"Nome do dominio\".");
+                        return false;
+                    }
+                    if ($("#valorLim").val() == "")
+                    {
+                        alert("Por favor, preencha o campo \"Valor minimo\".");
+                        return false;
+                    }
+                    if ($("#valorLim").val() < 0)
+                    {
+                        alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
+                        return false;
+                    }
+                    if (!$.isNumeric($("#valorLim").val()))
+                    {
+                        alert("O valor do campo \"Valor minimo\" deve ser numérico.");
+                        return false;
+                    }
+                    return true;
+                }
+            
                 $(document).ready(function() {
                         $('#tableresults').dataTable({
                             "bSort": false, // Disable sorting
@@ -33,9 +58,9 @@
             <header>
                 <a href="../index.jsp"><img id="logo" src="imagens/logo.png"/></a>
                 
-                <form name="buscaDom" method="get" onsubmit=" " action="buscaDominio">
+                <form name="buscaDom" method="get" onsubmit="return verificaForm() " action="buscaDominio">
                     <div id="buscaDom">
-                        <input class="inputBusca" name="inputNome" title="Nome do Domínio" size="62" placeholder="Nome do Domínio" autofocus="on" required="required"/>
+                        <input id = "inputNome" class="inputBusca" title="Nome do Domínio" size="62" name="inputNome" placeholder="Nome do Domínio" autofocus="on"/>
                         <input id ="valorLim" size="13" title="Valor Mínimo" placeholder="Valor Mínimo" name="valor"/>
                         <button id="btPesquisa"  type="submit"><img id="lupa" src="imagens/search-icon.png" /></button>
                     </div>
