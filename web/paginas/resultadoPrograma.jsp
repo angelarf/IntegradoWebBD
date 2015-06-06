@@ -1,5 +1,6 @@
 <%@page import="model.ProgramaBean"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.text.DecimalFormat"%>;
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -61,6 +62,8 @@
             </a>
             <div id="resultados">
                 <%
+                        DecimalFormat df = new DecimalFormat("#.00");
+                        df.setMaximumFractionDigits(2);
                         ArrayList<ProgramaBean> p_list = (ArrayList<ProgramaBean>)request.getAttribute("p_list");
                         //System.out.println("oobaa"+users.isEmpty());
                         if(p_list.isEmpty()) {
@@ -79,7 +82,7 @@
                             <%
                             for(ProgramaBean p: p_list){
                             %><tr>
-                                <td id="nomeprog"> <%= p.getNomePrograma()%> </td><td> <%= p.getGastoTotal()%></td>
+                                <td id="nomeprog"> <%= p.getNomePrograma()%> </td><td> <%= df.format(p.getGastoTotal())%></td>
                             </tr>
                             <% } %>
                         </table>
