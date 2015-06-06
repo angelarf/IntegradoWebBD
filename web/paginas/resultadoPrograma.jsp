@@ -1,6 +1,6 @@
 <%@page import="model.ProgramaBean"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="java.text.DecimalFormat"%>;
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
