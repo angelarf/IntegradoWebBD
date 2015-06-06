@@ -9,7 +9,24 @@
         <link rel="stylesheet" type="text/css" href="css/resultadoCss.css"> 
         <title>Resultados Domínio</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
- 
+ 	
+        <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js"></script>
+        <script type="text/javascript" charset="utf-8">
+                $(document).ready(function() {
+                        $('#tableresults').dataTable({
+                            "bSort": false, // Disable sorting
+                            "bInfo": false,
+                            "iDisplayLength": 10, //records per page
+                            "sDom": "t<'row'<'col-md-6'i><'col-md-6'p>>",
+                            //"sPaginationType": "bootstrap"
+                        });
+                } );
+        </script>
+
+        
+        
     </head>
     <body>
         <article id="corpo">
@@ -53,27 +70,28 @@
                 <%
                           } else {
                 %>
-                        <table>
-                            <tr>
-                                <th>Programa do Domínio</th><th>Gasto</th>
-                            </tr>
+                        <table id="tableresults">
+                            <thead>
+                                <tr>
+                                    <th>Programa do Domínio</th><th>Gasto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                             <%
                             int i=0;
                             DominioBean d = new DominioBean();
                             //for(DominioBean d: d_list){
-                            for(i=0; i < 10; i++){//GAMBIS
+                            for(i=0; i < d_list.size(); i++){//GAMBIS
                                 d = d_list.get(i);
-                            %><tr>
-                                <td id="nomeprog"> <%= d.getNomePrograma()%> </td><td> <%= df.format(d.getGasto())%></td>
-                            </tr>
+                            %>
+                               <tr>
+                                    <td id="nomeprog"> <%= d.getNomePrograma()%> </td><td> <%= df.format(d.getGasto())%></td>
+                                </tr>
                             <% } %>
+                            </tbody>
                         </table>
                     <% } %>
-                    <% if(d_list.size()>10){ %>
-                        <div id="pagination">
-                           ARRUMAR ISSO AQUI, TEM MAIS ITENS QUE O POSSIVEL === PAGINACAO 
-                        </div>
-                    <%}%>
+                    
             </div>
 
             <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Ver Gráficos</button></a>
