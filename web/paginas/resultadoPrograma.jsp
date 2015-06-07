@@ -131,7 +131,7 @@
                     <% } %>
             </div>
 
-            <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Ver Gráficos</button></a>
+            <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Gráficos</button></a>
         </article>
 
         

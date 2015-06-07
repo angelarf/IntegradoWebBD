@@ -74,10 +74,10 @@
 
                 <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
                     <div id="buscaDom">  
-                        <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
+                        <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio" autofocus="on"/>
                         <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>
                         <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação">
-                            <option value="nothing" disabled selected>Ordenar por:</option>
+                            <option value="nothing" disabled selected>Ordenar:</option>
 
                             <optgroup name="ord">
                                 <option value="Programas" class="option">Programas</option>

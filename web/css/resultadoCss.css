@@ -36,8 +36,8 @@ body {
 		#bottom { bottom: 0; }
 
 #logo{
-	//width:200px;
-        height: 55px;
+	width:15%;
+        min-height: 55px;
         margin-left:20px;
         margin-top: 20px;
         float:left;
@@ -53,30 +53,30 @@ header{
 
 
 .inputBusca {
-    width:69%;
+    width:65%;
     font-size: 18px;
-    //vertical-align: middle;
+    vertical-align: middle;
     float: left;
     border-color: #FFFFFF;
     border-style: none;
     margin-left: 5px;
-    //margin-top: 7px;
+    margin-top: 9px;
     padding-right: 5px;
     outline: none;
-    line-height: 38px;
+    //line-height: 38px;
 }
 
 #valorLim{
-    width: 21%;
+    width: 22%;
     font-size: 18px;
     //line-height: 38px;
-    //vertical-align: middle;
-    float: left;
+    vertical-align: middle;
+    //float: left;
     border-bottom-style: none;
     border-top-style: none;
     border-right-style: none;
     border-left: #ababab solid 2px;
-    margin-top: 8px;
+    margin-top: 9px;
     padding-left: 10px;
     outline: none;
 }
@@ -94,15 +94,12 @@ header{
 
 #btPesquisa{
     float:right;
+    width: 5%;
+    height: 40px;
 }
 
 #lupa{
-    //border: #14691b solid 1px;
-    //float: right;
-    //width: 25%;
-    //width:37px;
-    height:37px;
-    margin-right: 0px;
+    width: 120%;
 }
 button{
     border:none;
@@ -113,37 +110,35 @@ button{
 }
 
 #voltarBt{
-    width:90px;
-    height:90px;
+    width: 7%;
+    height:110px;
     float: left;
-    //border: #000000 solid 1px;
-    margin-top: 410px;
-    //margin-bottom: 10px;
+    margin-top: 390px;
+    text-align: center;
 }
 
 #voltar {
-    width:60px;
-    height:60px;
-    //margin-top:80px;
-}
+    width: 90%;
+ }
 
 #grafico{
+    width: 10%;
     //width:90px;
-    height:90px;
+    height:110px;
     float:right;
     margin-right:20px;
-    margin-top: -70px;
+    //margin-top: -30%;
+    margin-top: -90px;
 }
 
 #graficoImg{
-    width:60px;
-    height:60px;
+    width:75%;
+    //height:60px;
 }
 
 #caminho{
-    width: 100%;
+    //width: 90%;
     height: 22px;
-    width: 100%;
     color: #999999;
     padding-left: 30px;
     padding-top: 5px;
@@ -156,8 +151,6 @@ button{
 }
 
 #resultados{
-    margin-top:20px;
-    
     width: 75%;
     height: 460px;
     margin-top: 10px;
@@ -169,6 +162,7 @@ button{
     //position:relative;
     //border: #cccccc solid 1px;
 }
+
 table{
     width: 100%;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
@@ -192,11 +186,7 @@ td{
 #nomeprog{
    width: 75%;
 }
-/*#pagination{
-    background-color: black;
-    color: white;
-    height: 30px;
-}*/
+
 
 /*****Results Programa******/
 #inProg {
@@ -232,7 +222,7 @@ td{
 }
 /****Resultado Subdominio****/
 #selectMes{
-    width: 185px;
+    width: 25%;
     font-size: 18px;
     //vertical-align: middle;
     float: left;
@@ -296,10 +286,11 @@ ul.pagination li:hover a,ul.pagination li a:focus{
 ul.pagination li.unavailable a{
     cursor:default;
     text-decoration: none;
+    color:#e6e6e6;
 }
 ul.pagination li.unavailable:hover a,ul.pagination li.unavailable a:focus{
     text-decoration: none; 
-    background:transparent
+    background:transparent;
 }
 
 ul.pagination li.current a{
