@@ -70,7 +70,7 @@
             <a href="index.jsp">
                  <button id="voltarBt">
                     <img id="voltar" src="imagens/home.png"/>
-                    Voltar
+                    Home
                  </button>
             </a>
 

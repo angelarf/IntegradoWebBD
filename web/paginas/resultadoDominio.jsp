@@ -77,7 +77,7 @@
             <a href="index.jsp">
                  <button id="voltarBt">
                     <img id="voltar" src="imagens/home.png"/>
-                    Início
+                    Home
                  </button>
             </a>
             <div id="resultados">
