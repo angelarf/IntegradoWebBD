@@ -49,31 +49,26 @@
         
     </head>
     <body>
-        <article id="corpo">
-            <div id="left"></div>
-            <div id="right"></div>
-            <div id="top"></div>
-            <div id="bottom"></div>
-
-
-
-            <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
-            <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-            <form name="buscaDom" method="get" onsubmit=" return verificaForm()" action="../buscaDominio"> <!---->
-                <div id="buscaDom">
-                    <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on"/>
-                    <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
-                    <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
-                </div>
-             </form> <!---->
-        </article>
-        <article id="opcoes">
-             <a href="../index.jsp">
-                 <button id="voltarBt">
-                    <img id="voltar" src="../imagens/home.png"/>
-                    Home
-                 </button>
-             </a>
-        </article>
+        <div id="content">
+            <article id="corpo">
+                <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
+                <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
+                <form name="buscaDom" method="get" onsubmit=" return verificaForm()" action="../buscaDominio"> <!---->
+                    <div id="buscaDom">
+                        <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on"/>
+                        <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
+                        <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
+                    </div>
+                 </form> <!---->
+            </article>
+            <article id="opcoes">
+                 <a href="../index.jsp">
+                     <button id="voltarBt">
+                        <img id="voltar" src="../imagens/home.png"/>
+                        Home
+                     </button>
+                 </a>
+            </article>
+        </div>
     </body>
 </html>
