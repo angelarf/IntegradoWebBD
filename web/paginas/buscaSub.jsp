@@ -40,8 +40,8 @@
                 <form name="buscaSub" method="get" onsubmit="return verificaForm()" action="../buscaSubdominio"> <!--!--> 
                 <!--<form method='get' action="../buscaSubdominio">-->
                     <div id="buscaDom">
-                        <input class="inputBusca" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on" name="inputNome"/>
-                        <select id="selectMes" name='mes' title="Dados referentes a 2014">
+                        <input class="inputBusca" name="inputNome" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on" title="Selecione o subdominio desejado."/>
+                        <select id="selectMes" name='mes' title="Selecione o mês desejado.">
                             <optgroup label="Meses">
                                 <option value=1 class="option">Janeiro</option>
                                 <option value=2 class="option">Fevereiro</option

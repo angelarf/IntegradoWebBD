@@ -55,7 +55,7 @@
                 <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
                 <form name="buscaDom" method="get" onsubmit=" return verificaForm()" action="../buscaDominio"> <!---->
                     <div id="buscaDom">
-                        <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on"/>
+                        <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on" title="Insira o nome do domínio que deseja ver."/>
                         <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
                         <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                     </div>

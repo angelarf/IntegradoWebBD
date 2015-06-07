@@ -61,7 +61,7 @@
                 <form name="buscaDom" method="get" onsubmit="return verificaForm() " action="buscaDominio">
                     <div id="buscaDom">
                         <input id = "inputNome" class="inputBusca" title="Nome do Domínio" size="62" name="inputNome" placeholder="Nome do Domínio" autofocus="on"/>
-                        <input id ="valorLim" size="13" title="Valor Mínimo" placeholder="Valor Mínimo" name="valor"/>
+                        <input id ="valorLim" size="13" title="Insira um valor númerico. Não use vírgula, use ponto." placeholder="Valor Mínimo" name="valor" />
                         <button id="btPesquisa"  type="submit"><img id="lupa" src="imagens/search-icon.png" /></button>
                     </div>
                 </form>

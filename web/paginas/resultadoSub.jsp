@@ -41,8 +41,8 @@
                 <img id="logo" src="imagens/logo.png"/>
                 <form name="buscaSub" method="get" onsubmit="return verificaForm()" action="buscaSubdominio"> <!--!--> 
                     <div id="buscaDom">
-                        <input class="inputBusca" name="inputNome" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on"/>
-                        <select name="mes" id="selectMes" title="Dados referentes a 2014">
+                        <input class="inputBusca" name="inputNome" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on" title="Selecione o subdominio desejado."/>
+                        <select name="mes" id="selectMes" title="Selecione o mês que deseja ver">
                             <optgroup  label="Meses">
                                 <option value=1 class="option">Janeiro</option>
                                 <option value=2 class="option">Fevereiro</option>

@@ -75,7 +75,7 @@
                 <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
                     <div id="buscaDom">  
                         <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio" autofocus="on"/>
-                        <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>
+                        <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
                         <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação">
                             <option value="nothing" disabled selected>Ordenar:</option>
 
