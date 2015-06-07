@@ -67,34 +67,32 @@
         
     </head>
     <body>
-        <article id="corpo">
-            <div id="left"></div>
-            <div id="right"></div>
-            <div id="top"></div>
-            <div id="bottom"></div>
-            <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
-            <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
+        <div id="content">
+            <article id="corpo">
+                <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
+                <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
 
-            <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
-                <div id="buscaDom">  
-                    <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
-                    <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>
-                    <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação">
-                        <option value="nothing" disabled selected>Ordenar por:</option>
-                         
-                        <optgroup name="ord">
-                            <option value="Programas" class="option">Programas</option>
-                            <option value="Gastos" class="option">Gastos</option>
-                        </optgroup>
-                    </select>
-                    
-                    <button id="btPesquisa" type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
-                </div>
-            </form> <!---->
+                <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
+                    <div id="buscaDom">  
+                        <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio que deseja ver" autofocus="on"/>
+                        <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo"/>
+                        <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação">
+                            <option value="nothing" disabled selected>Ordenar por:</option>
 
-        </article>
-        <article id="opcoes">
-            <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>
-        </article>
+                            <optgroup name="ord">
+                                <option value="Programas" class="option">Programas</option>
+                                <option value="Gastos" class="option">Gastos</option>
+                            </optgroup>
+                        </select>
+
+                        <button id="btPesquisa" type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
+                    </div>
+                </form> <!---->
+
+            </article>
+            <article id="opcoes">
+                <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>
+            </article>
+        </div>
     </body>
 </html>
