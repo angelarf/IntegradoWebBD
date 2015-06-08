@@ -43,7 +43,7 @@
                         $('#tableresults').dataTable({
                             "bSort": false, // Disable sorting
                             "bInfo": false,
-                            "iDisplayLength": 10, //records per page
+                            "iDisplayLength": 9, //records per page
                             "sDom": "t<'row'<'col-md-6'i><'col-md-6'p>>",
                             //"sPaginationType": "bootstrap"
                         });

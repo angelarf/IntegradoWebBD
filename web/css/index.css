@@ -36,7 +36,7 @@ a {
 
 #index {
 	text-decoration:line-through;
-	color:	#000000		;
+	color:	#000000;
 	
 }
 
@@ -88,8 +88,8 @@ h1{
 }
 
 #legenda{
-	font-size:80%;
-        font-size-adjust: 0.4;
+	font-size:15px;
+        //font-size-adjust: 0.4;
         font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	color:#5B5B5B;
         float:left;
@@ -99,7 +99,7 @@ h1{
 }
 
 #texto{
-        font-size-adjust: 0.4;
+        //font-size-adjust: 0.4;
 	font-size:45px;	
         //text-align: center;
 	font-family:"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
