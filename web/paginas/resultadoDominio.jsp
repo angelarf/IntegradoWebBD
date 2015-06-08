@@ -56,7 +56,7 @@
     <body>
         <article id="corpo">
             <header>
-                <a href="../index.jsp"><img id="logo" src="imagens/logo.png"/></a>
+                <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
                 
                 <form name="buscaDom" method="get" onsubmit="return verificaForm() " action="buscaDominio">
                     <div id="buscaDom">

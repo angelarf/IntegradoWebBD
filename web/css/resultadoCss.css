@@ -71,7 +71,7 @@ header{
     font-size: 18px;
     //line-height: 38px;
     vertical-align: middle;
-    //float: left;
+    float: left;
     border-bottom-style: none;
     border-top-style: none;
     border-right-style: none;
@@ -258,7 +258,9 @@ div.dataTables_paginate {
 }
 .pagination{
     color: #999999;
-    width: 40%;
+    width: 50%;
+    //background-color: greenyellow;
+
 }
 ul.pagination{
     display:block;
@@ -270,6 +272,7 @@ ul.pagination li{
     height:20px;
     //color:#222;
     font-size:16px;
+    margin: auto;
 }
 ul.pagination li a{
     text-decoration: none;
@@ -313,4 +316,11 @@ ul.pagination li{
 }
 .pagination-centered ul.pagination li{
     display:inline-block;
+}
+
+
+/*****************************/
+a:focus{
+    border: none;
+    outline: none;
 }

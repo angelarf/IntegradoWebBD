@@ -109,13 +109,13 @@
     <body>
         <article id="corpo">
         <header>
-            <img id="logo" src="imagens/logo.png"/>
+            <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
             <form name="buscaProg" method="get" action="buscaPrograma" onsubmit="return verificaForm() ">
                <div id="buscaDom">  
                     <input name="inProg" id="inProg" size="62" placeholder="Nome do domínio" autofocus="on" title="Insira o nome do dominio."/>
                     <input name="valor" id ="valorLim" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
                     <select name="ordenacao" id ="ordenacao" title="Selecione a Ordenação desejada.">
-                        <option value="nothing" disabled selected>Ordenar por:</option>
+                        <option value="nothing" disabled selected>Ordenação</option>
                          
                         <optgroup name="ord">
                             <option value="Programas" class="option">Programas</option>

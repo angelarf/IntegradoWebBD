@@ -38,7 +38,7 @@
     <body>
         <article id="corpo">
             <header>
-                <img id="logo" src="imagens/logo.png"/>
+                <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
                 <form name="buscaSub" method="get" onsubmit="return verificaForm()" action="buscaSubdominio"> <!--!--> 
                     <div id="buscaDom">
                         <input class="inputBusca" name="inputNome" id = "inputNome" size="62" placeholder="Nome do Subdomínio" autofocus="on" title="Selecione o subdominio desejado."/>
