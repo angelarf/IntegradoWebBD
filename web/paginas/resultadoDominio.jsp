@@ -47,6 +47,8 @@
                             "sDom": "t<'row'<'col-md-6'i><'col-md-6'p>>",
                             //"sPaginationType": "bootstrap"
                         });
+                        document.getElementById('tableresults').style.display='table';
+                        
                 } );
         </script>
 
@@ -54,6 +56,7 @@
         
     </head>
     <body>
+        <div id='bbb'> </div>
         <article id="corpo">
             <header>
                 <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
@@ -106,7 +109,7 @@
                             int i=0;
                             DominioBean d = new DominioBean();
                             //for(DominioBean d: d_list){
-                            for(i=0; i < d_list.size(); i++){//GAMBIS
+                            for(i=0; i < Math.min(d_list.size(), 1000); i++){
                                 d = d_list.get(i);
                             %>
                                <tr>

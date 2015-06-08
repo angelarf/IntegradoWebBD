@@ -70,7 +70,9 @@ public class buscaDominio extends HttpServlet {
             String dom = request.getParameter("inputNome");
             //System.out.println(subdom);
             String v = request.getParameter("valor");
-            float valor = Float.valueOf(v);
+            float valor;
+            if (v == "") valor = 0;
+            else valor = Float.valueOf(v);
             
             d_list = ddao.buscarDominio(dom, valor); //ARRUMAR
             

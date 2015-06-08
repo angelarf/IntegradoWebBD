@@ -36,7 +36,6 @@
         <div id="content">
             <article id="corpo">
                 <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
-                <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
                 <form name="buscaSub" method="get" onsubmit="return verificaForm()" action="../buscaSubdominio"> <!--!--> 
                 <!--<form method='get' action="../buscaSubdominio">-->
                     <div id="buscaDom">
@@ -60,7 +59,11 @@
                         <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                     </div>
               </form> 
-
+              <div id="txtDesc">
+                 Para saber o gasto total de um subdomínio num determinado mês, informe o nome e o mês desejado.
+                 Dados referentes ao ano de 2014.
+               </div>
+                
             </article>
             <article id="opcoes">
                 <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>

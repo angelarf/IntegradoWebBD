@@ -15,8 +15,8 @@
         <section id="content">
             <section id="description">
                <img id="img_info" src="../imagens/sobre.png" />
-                <div id="txt">Esse site é um trabalho acadêmico para as disciplinas de Engenharia de Software II, Laboratório de Banco de Dados e Desenvolvimento Web.
-                    Foi desenvolvido por:</div>    
+               <div id="txt">Este site é resultado de um projeto acadêmico interdisciplinar no primeiro semestre de 2015
+                            do curso de Ciência da Computação da UFSCsr Sorocaba. Desenvolvedores:</div>  
             </section>
             <div id="componentes">
                 <div id="voltar">

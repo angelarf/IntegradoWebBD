@@ -17,21 +17,20 @@
                     alert("Por favor, preencha o campo \"Nome do dominio\".");
                     return false;
                 }
-                if ($("#valorLim").val() == "")
+                if ($("#valorLim").val() != "")
                 {
-                    alert("Por favor, preencha o campo \"Valor minimo\".");
-                    return false;
+                  if ($("#valorLim").val() < 0)
+                    {
+                        alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
+                        return false;
+                    }
+                     if (!$.isNumeric($("#valorLim").val()))
+                    {
+                        alert("O valor do campo \"Valor minimo\" deve ser numérico.");
+                        return false;
+                    }
                 }
-                if ($("#valorLim").val() < 0)
-                {
-                    alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
-                    return false;
-                }
-                if (!$.isNumeric($("#valorLim").val()))
-                {
-                    alert("O valor do campo \"Valor minimo\" deve ser numérico.");
-                    return false;
-                }
+               
                 return true;
             }
             /*function enviaConsulta() 
@@ -52,14 +51,19 @@
         <div id="content">
             <article id="corpo">
                 <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
-                <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
                 <form name="buscaDom" method="get" onsubmit=" return verificaForm()" action="../buscaDominio"> <!---->
                     <div id="buscaDom">
                         <input id = "inputNome" class="inputBusca" name="inputNome" size="62" placeholder="Nome do Domínio" autofocus="on" title="Insira o nome do domínio que deseja ver."/>
                         <input id ="valorLim" name="valor" size="13" placeholder="Valor Mínimo" title="Insira um valor númerico. Não use vírgula, use ponto."/>
                         <button id="btPesquisa"  type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                     </div>
-                 </form> <!---->
+                </form> <!---->
+            
+                <div id="txtDesc">
+                    Para ver os gastos individuais dos programas de um domínio,
+                    informe seu nome e se desejar ver gastos superiores a um valor específico, informe-o.
+                </div>
+                
             </article>
             <article id="opcoes">
                  <a href="../index.jsp">

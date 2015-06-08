@@ -70,8 +70,6 @@
         <div id="content">
             <article id="corpo">
                 <a href="../index.jsp"><img id="logo" src="../imagens/logo.png"/></a>
-                <div id="txtDesc">Um pequeno texto descrevendo a consulta pequeno pequeno pequeno</div>
-
                 <form name="buscaProg" method="get" onsubmit ="return verificaForm() " action="../buscaPrograma"> <!---->
                     <div id="buscaDom">  
                         <input name="inProg"id="inProg" size="62" placeholder="Nome do domínio" autofocus="on"/>
@@ -88,7 +86,11 @@
                         <button id="btPesquisa" type="submit"><img id="lupa" src="../imagens/search-icon.png" /></button>
                     </div>
                 </form> <!---->
-
+                <div id="txtDesc">
+                    Para ver o gasto total de cada programa de um domínio, informe o nome (ou parte dele) do domínio.
+                    Se desejar ver gastos superiores a um valor específico, informe-o. 
+                    É possível ordenar os resultados pelo nome ou pelos gastos, decrescentemente.
+                </div>
             </article>
             <article id="opcoes">
                 <a href="../index.jsp"><button id="voltarBt"><img id="voltar" src="../imagens/home.png"/><br>Home</button></a>
