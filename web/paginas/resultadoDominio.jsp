@@ -50,13 +50,35 @@
                         document.getElementById('tableresults').style.display='table';
                         
                 } );
+                function graf()
+                {
+                    document.getElementById('pagGrafico').style.display='inline';
+                    document.getElementById('bloqueio').style.display='inline';
+                    document.getElementById('imgfechar').style.display='inline';
+                    document.getElementById('fechar').style.display='inline';
+                }
+                function fechar()
+                {
+                    document.getElementById('pagGrafico').style.display='none';
+                    document.getElementById('bloqueio').style.display='none';
+                    document.getElementById('imgfechar').style.display='none';
+                    document.getElementById('fechar').style.display='none';
+                }
         </script>
 
         
         
     </head>
     <body>
-        <div id='bbb'> </div>
+        <div id="bloqueio">
+            <div id="pagGrafico">
+                BLABLABLA
+            </div>
+            <div id="fechar">
+                <img id="imgfechar" src="imagens/close.png" onclick="fechar()"/>
+            </div>
+        </div>
+        
         <article id="corpo">
             <header>
                 <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
@@ -122,8 +144,14 @@
                     
             </div>
 
-            <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Gráficos</button></a>
+                    <a href="#pagGrafico" onclick="graf()">
+                        <button id="grafico">
+                            <img id="graficoImg" src="imagens/grafico.png"/>
+                            <br>Gráficos
+                        </button>
+                    </a>
         </article>
-
+                    
+        
     </body>
 </html>
