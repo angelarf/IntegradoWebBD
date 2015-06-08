@@ -3,14 +3,21 @@
 
 body {
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-        background-color:#f4f7f7;
+        background:#14691b;
 	
 }
 #corpo{
     margin-left: 30px;
     margin-right: 30px;
-    //border: #ababab solid;
     height: 520px;
+}
+#content{
+    background-color:#f4f7f7;
+    width: 96%;
+    height: 605px;
+    margin-top: 30px;
+    margin-left:auto;
+    margin-right: auto; 
 }
 
 #top, #bottom, #left, #right {
@@ -32,27 +39,52 @@ body {
 		#bottom { bottom: 0; }
 
 #logo{
-	width:500px;
-	margin-top:60px;
-	margin-left:35%;
-        //margin-right: 35%;
+    width:41%;
+    margin-top:60px;
+    margin-left:35%;
+    //margin-right: 35%;
 }
 
 #txtDesc{
     //border-style: solid;
     font-size:24px;	
     //font-weight:bolder;
-    width:850px;
+    width:71%;
     color:#ababab;
     margin-top: 50px;
-    margin-left:220px;
-    margin-right: 250px;
+    margin-left:auto;
+    margin-right: auto;
     margin-bottom: 20px;
     padding: 0px; 
     text-align: center;
 }
+
+#buscaDom{
+    width:68%;
+    margin-left:auto;
+    margin-right: auto;
+    //float:left;
+    border: #ababab solid 2px;
+    height: 45px;
+    background: #FFFFFF;
+}
+
 #inProg {
-    width:400px;
+    width:47%; //VERIFICAR
+    vertical-align: middle;
+    float: left;
+    border-color: #FFFFFF;
+    border-style: none;
+    margin-left: 5px;
+    padding-right: 5px;
+    margin-top: 10px;
+    outline: none;
+    font-size: 20px;
+    //line-height: 42px;
+}
+
+.inputBusca {
+    width:66%;
     font-size: 20px;
     vertical-align: middle;
     float: left;
@@ -61,23 +93,12 @@ body {
     margin-left: 5px;
     padding-right: 5px;
     outline: none;
-    line-height: 42px;
-}
-.inputBusca {
-    width:570px;
-    font-size: 20px;
-    vertical-align: central;
-    float: left;
-    border-color: #FFFFFF;
-    border-style: none;
-    margin-left: 5px;
-    padding-right: 5px;
-    outline: none;
-    line-height: 42px;
+    margin-top: 10px;
+    //line-height: 42px;
 }
 
 #valorLim{
-    width: 185px;
+    width: 22%;
     font-size: 20px;
     vertical-align: middle;
     float: left;
@@ -90,10 +111,10 @@ body {
     outline: none;
 }
 #selectMes{
-    width: 185px;
+    width: 23%;
     font-size: 20px;
     vertical-align: central;
-    float: left;
+    //float: left;
     border-bottom-style: none;
     border-top-style: none;
     border-right-style: none;
@@ -103,10 +124,10 @@ body {
     outline: none;
 }
 #ordenacao{
-    width: 170px;
+    width: 20%;
     font-size: 20px;
     vertical-align: central;
-    float: left;
+    //float: left;
     border-bottom-style: none;
     border-top-style: none;
     border-right-style: none;
@@ -121,24 +142,16 @@ body {
     color:black;
 }
 
-#buscaDom{
-    width:850px;
-    margin-left:220px;
-    float:left;
-    border: #ababab solid 2px;
-    height: 45px;
-    background: #FFFFFF;
-}
-
 #btPesquisa{
     float:right;
+    width: 5%;
+    height: 45px;
+    //background-color: greenyellow;
 }
 
 #lupa{
-    //border: #14691b solid 1px;
-    float: right;
-    //width:40px;
-    height:45px;
+    width: 120%;
+    //margin-right: -12px;
 }
 button{
     border:none;
@@ -163,14 +176,22 @@ button{
     float: left;
     //margin-bottom: 2px;
     text-align: center;
+    border: none;
+    outline: none;
 }
 
 #voltar {
     width:70px;
     height:60px;
     float: left;
+    border: none;
+    outline: none;
     //border:#ababab solid;
 
+}
+a:focus{
+    border: none;
+    outline: none;
 }
 /*
 #voltar, a {

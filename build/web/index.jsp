@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/pagina1.css"> 
+        <link rel="stylesheet" type="text/css" href="css/index.css"> 
         <title>Dados Abertos</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
    </head>

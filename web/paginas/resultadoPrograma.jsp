@@ -10,6 +10,43 @@
         <title>Resultados Programa</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+
+          // Load the Visualization API and the piechart package.
+          google.load('visualization', '1.0', {'packages':['corechart']});
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.setOnLoadCallback(drawChart);
+
+          // Callback that creates and populates a data table,
+          // instantiates the pie chart, passes in the data and
+          // draws it.
+          function drawChart() {
+              <%   ArrayList<ProgramaBean> p_list = (ArrayList<ProgramaBean>)request.getAttribute("p_list");%>
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Programa');
+            data.addColumn('number', 'Gasto');
+            data.addRows([
+                <%/*
+                    for(ProgramaBean p: p_list){
+                  */  %>
+                        ['<%/*=   p.getNomePrograma()*/%>', <%/*=    p.getGastoTotal()*/%>],
+                <% /*} */%>
+              ['', 0]
+            ]);
+
+            // Set chart options
+            var options = {'title':'Gastos dos programas',
+                           'width':800,
+                           'height':600};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+          }
+        </script>-->
 
         <script>
             function verificaForm()
@@ -106,8 +143,7 @@
                 <%
                         DecimalFormat df = new DecimalFormat("#.00");
                         df.setMaximumFractionDigits(2);
-                        ArrayList<ProgramaBean> p_list = (ArrayList<ProgramaBean>)request.getAttribute("p_list");
-                        //System.out.println("oobaa"+users.isEmpty());
+                        //ArrayList<ProgramaBean> p_list = (ArrayList<ProgramaBean>)request.getAttribute("p_list");
                         if(p_list.isEmpty()) {
                 %>
                             <div id="noresults">
@@ -129,6 +165,7 @@
                             <% } %>
                         </table>
                     <% } %>
+            <!--<div id="chart_div"></div>  -->
             </div>
 
             <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Gráficos</button></a>
