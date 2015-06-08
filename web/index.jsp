@@ -44,7 +44,11 @@
 
         </section>
         <footer>
-            Projeto Engenharia de Sorftware II | Laboratório de Banco de dados | Desenvolvimento Web 2015
+            <div style="width: 100%; float:left">
+                Projeto Engenharia de Sorftware II | Laboratório de Banco de dados | Desenvolvimento Web 2015
+                <a href="paginas/about.jsp"> <img src="imagens/sobre.png" style=" height: 35px; margin-right: 20px; float:right "/> </a>
+            </div>
+            
         </footer>
 
     </body> 

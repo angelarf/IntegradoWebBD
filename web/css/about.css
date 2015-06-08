@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;	
+	margin:0;
+	padding:0;
+        background-color:#f4f7f7
+}
+
+
+#cabeca {
+	width:100%;
+	height:90px;
+        background-color:#2F9B45;
+}
+
+
+#logo {
+	//width:25%;
+	height:90px;
+	position:relative;
+        cursor: pointer;
+}
+
+#cabeca a {
+	margin-left:60%;
+	position:relative;
+	margin:10px;
+	font-size:20px;
+	text-decoration:none;
+		
+}
+a {
+	text-decoration:none;
+}
+
+footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px; 
+   background-color:#2F9B45;
+   font-size:18px;
+   font-weight: bold; 
+   text-align:center;
+   padding-top:10px;
+}
+
+#content{
+    width: 100%;
+    height: 540px;
+    float: left;
+    display: table;
+}
+
+#description{
+    //width: 80%;
+    //margin-left: 25px;
+    width: 60%;
+    height: 70px;
+    min-height: 50px; 
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    //background-color: #E0A3AA;
+}
+#txt{
+    font-size: 20px;
+    color:#999999;
+    //margin-top: 35px;
+}
+#img_info{
+    width: 5%;
+    //width: 10%;
+    //height: 100%;
+    float: left;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+#componentes{
+    width: 100%;
+    height: 440px;
+    //padding-left: 8%;
+    display: table;
+}
+#voltar{
+    width: 10%;
+    height: 100%;
+    float: left;
+    //padding-top: 25%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    //background-color: #fbcd94;
+}
+#voltar img{
+    margin-top: 300px;
+    width: 60%;
+}
+
+#voltar a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+}
+#right{
+    width: 45%;
+    float: right;
+    //display: inline-table;
+    //background-color: black;
+}
+
+#left{
+    width: 45%;
+    float: left;
+    //padding-left: 7%;
+    //background-color: #000000;
+}
+.box{
+    margin-left:5%;
+    margin-right:3%;
+    margin-bottom: 9%;
+    margin-top: 3%;
+    width: 77%;
+    height:140px;
+    border-radius:20px;
+    padding-left: 12px;
+    padding-top: 7px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    border-color: #ababab;
+    //background-color: #d7f3f3;
+        //aac6c6;
+        //#a3d9c1;
+}
+#photo{
+    width: 26%;
+    margin-top: 5px;
+    float:left;
+}
+.box img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.6);
+}
+
+#name{
+    width: 65%;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+}
+
+#bio{
+    width: 65%;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 16px;  
+    float: left;
+}
