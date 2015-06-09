@@ -72,7 +72,7 @@
     <body>
         <div id="bloqueio">
             <div id="pagGrafico">
-                BLABLABLA
+                
             </div>
             <div id="fechar">
                 <img id="imgfechar" src="imagens/close.png" onclick="fechar()"/>

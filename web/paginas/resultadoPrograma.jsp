@@ -10,7 +10,7 @@
         <title>Resultados Programa</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-        <!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
 
           // Load the Visualization API and the piechart package.
@@ -29,24 +29,25 @@
             data.addColumn('string', 'Programa');
             data.addColumn('number', 'Gasto');
             data.addRows([
-                <%/*
+                <%
                     for(ProgramaBean p: p_list){
-                  */  %>
-                        ['<%/*=   p.getNomePrograma()*/%>', <%/*=    p.getGastoTotal()*/%>],
-                <% /*} */%>
+                        if (p.getNomePrograma().length() > 5){
+                    %>
+                        ['<%=   p.getNomePrograma().substring(0,5)%>', <%=    p.getGastoTotal()%>],
+                <% }} %>
               ['', 0]
             ]);
 
             // Set chart options
             var options = {'title':'Gastos dos programas',
-                           'width':800,
-                           'height':600};
+                           'width':1080,
+                           'height':540};
 
             // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
             chart.draw(data, options);
           }
-        </script>-->
+        </script>
 
         <script>
             function verificaForm()
@@ -84,6 +85,21 @@
                 var valorLimite = $("#valorLim").val();
                 var opcaoOrdenacao = $("#ordenacao").val();
             }*/
+    
+                function graf()
+                {
+                    document.getElementById('pagGrafico').style.display='inline';
+                    document.getElementById('bloqueio').style.display='inline';
+                    document.getElementById('imgfechar').style.display='inline';
+                    document.getElementById('fechar').style.display='inline';
+                }
+                function fechar()
+                {
+                    document.getElementById('pagGrafico').style.display='none';
+                    document.getElementById('bloqueio').style.display='none';
+                    document.getElementById('imgfechar').style.display='none';
+                    document.getElementById('fechar').style.display='none';
+                }
 
             
             $(document).ready(function()
@@ -107,6 +123,16 @@
         
       </head>
     <body>
+        <div id="bloqueio">
+            <div id="pagGrafico">
+                <div id="teste"></div>
+                <div id="chart_div"></div> 
+            </div>
+            <div id="fechar">
+                <img id="imgfechar" src="imagens/close.png" onclick="fechar()"/>
+            </div>
+        </div>
+        
         <article id="corpo">
         <header>
             <a href="index.jsp"><img id="logo" src="imagens/logo.png"/></a>
@@ -165,10 +191,15 @@
                             <% } %>
                         </table>
                     <% } %>
-            <!--<div id="chart_div"></div>  -->
+            
             </div>
 
-            <a href="index.jsp"><button id="grafico"><img id="graficoImg" src="imagens/grafico.png"/><br>Gráficos</button></a>
+             <a href="#pagGrafico" onclick="graf()">
+                        <button id="grafico">
+                            <img id="graficoImg" src="imagens/grafico.png"/>
+                            <br>Gráficos
+                        </button>
+                    </a>
         </article>
 
         
