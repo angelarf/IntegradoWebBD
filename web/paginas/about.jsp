@@ -29,8 +29,7 @@
                     </div>
                     <div id="name">Ângela Ferreira</div>
                     <div id="bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Cursa Ciência da Computação na UFSCar Sorocaba, sempre procura aprender coisas novas e rir de piadas sem graça.
 
                     </div>
                 </div>
@@ -40,8 +39,7 @@
                     </div>
                     <div id="name">Monique Ribeiro</div>
                     <div id="bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Cursando o ultimo ano de Ciência da Computação na UFSCar Sorocaba, seus hobbies são cozinhar, videogames e séries.
 
                     </div> 
                 </div>
@@ -54,9 +52,8 @@
                     </div>
                     <div id="name">Rafael Zanetti</div>
                     <div id="bio">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
+                        Estudante de Ciência da Comuputação na UFSCar Sorocaba, 
+                        é apaixonado por Python e futebol americano.
                     </div>
                 </div>
                 <div class="box">
