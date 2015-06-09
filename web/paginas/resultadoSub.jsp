@@ -158,10 +158,11 @@
                             </tr>
                             <%
                             for(SubdominioBean s: s_list){
+                                if (s.getName().length() > 4){
                             %><tr>
                                 <td id="nomeprog"> <%= s.getName()%> </td><td> <%= df.format(s.getGastoTotal())%></td>
                             </tr>
-                            <% } %>
+                            <% }} %>
                         </table>
                     <% } %>
                 

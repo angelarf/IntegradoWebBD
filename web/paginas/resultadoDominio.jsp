@@ -130,12 +130,16 @@
                             <%
                             int i=0;
                             DominioBean d = new DominioBean();
+                            String nome;
                             //for(DominioBean d: d_list){
                             for(i=0; i < Math.min(d_list.size(), 1000); i++){
                                 d = d_list.get(i);
+                                if (d.getNomePrograma().length() > 4)
+                                    nome = d.getNomePrograma();
+                                else    nome = "(sem nome)";
                             %>
                                <tr>
-                                    <td id="nomeprog"> <%= d.getNomePrograma()%> </td><td> <%= df.format(d.getGasto())%></td>
+                                    <td id="nomeprog"> <%= nome %> </td><td> <%= df.format(d.getGasto())%></td>
                                 </tr>
                             <% } %>
                             </tbody>

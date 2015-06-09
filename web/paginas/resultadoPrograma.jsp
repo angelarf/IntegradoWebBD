@@ -185,10 +185,11 @@
                             </tr>
                             <%
                             for(ProgramaBean p: p_list){
+                                if (p.getNomePrograma().length() > 4){
                             %><tr>
                                 <td id="nomeprog"> <%= p.getNomePrograma()%> </td><td> <%= df.format(p.getGastoTotal())%></td>
                             </tr>
-                            <% } %>
+                            <% }} %>
                         </table>
                     <% } %>
             
