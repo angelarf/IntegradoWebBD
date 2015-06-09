@@ -25,7 +25,7 @@ public class ProgramaDAO {
     PreparedStatement statement;
     dominio = dominio.replace("Ã§", "c");
     dominio = dominio.replace("Ã£", "a");
-    String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao.toLowerCase()+"');"; //ARRUMAR, SERIO
+    String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao.toLowerCase()+"');";
  
     statement = connection.prepareStatement(SQL);
     r = statement.executeQuery();
