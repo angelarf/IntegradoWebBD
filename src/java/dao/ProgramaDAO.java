@@ -19,12 +19,11 @@ public class ProgramaDAO {
   }
 
   public ArrayList buscarPrograma(String dominio, float valor, String ordenacao) throws SQLException {
-    
     //System.out.println("sub: "+ subdominio);
     ArrayList<ProgramaBean> p_list = new ArrayList<ProgramaBean>();
     ResultSet r;
     PreparedStatement statement;
-    String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao+"');"; //ARRUMAR, SERIO
+    String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao.toLowerCase()+"');"; //ARRUMAR, SERIO
  
     statement = connection.prepareStatement(SQL);
     r = statement.executeQuery();

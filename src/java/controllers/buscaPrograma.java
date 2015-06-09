@@ -73,7 +73,9 @@ public class buscaPrograma extends HttpServlet {
             String nomeDom = request.getParameter("inProg");
             //System.out.println(subdom);
             String v = request.getParameter("valor");
-            float valor = Float.valueOf(v);
+            float valor;
+            if (v == "") valor = 0;
+            else valor = Float.valueOf(v);
             
             String ordenacao = request.getParameter("ordenacao");
             
