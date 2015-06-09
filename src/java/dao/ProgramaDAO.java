@@ -23,6 +23,7 @@ public class ProgramaDAO {
     ArrayList<ProgramaBean> p_list = new ArrayList<ProgramaBean>();
     ResultSet r;
     PreparedStatement statement;
+    dominio = dominio.replace("Ã§", "c");
     String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao.toLowerCase()+"');"; //ARRUMAR, SERIO
  
     statement = connection.prepareStatement(SQL);

@@ -24,7 +24,9 @@ public class SubdominioDAO {
     ArrayList<SubdominioBean> sub_list = new ArrayList<SubdominioBean>();
     ResultSet r;
     PreparedStatement statement;
-    String SQL = "select * from Consulta1('" +subdominio+ "'," +mes+");";
+    subdominio = subdominio.replace("Ã§", "c");
+    subdominio = subdominio.replace("Ã£", "a");
+    String SQL = "select * from Consulta1('" +subdominio + "'," +mes+");";
  
     statement = connection.prepareStatement(SQL);
     r = statement.executeQuery();

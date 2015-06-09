@@ -24,6 +24,8 @@ public class DominioDAO {
     ArrayList<DominioBean> dom_list = new ArrayList<DominioBean>();
     ResultSet r;
     PreparedStatement statement;
+    dominio = dominio.replace("Ã§", "c");
+    dominio = dominio.replace("Ã£", "a");
     String SQL = "select * from ConsultaDominio('" +dominio+ "'," +valor+");";
  
     statement = connection.prepareStatement(SQL);
