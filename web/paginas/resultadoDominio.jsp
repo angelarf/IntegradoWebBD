@@ -21,20 +21,18 @@
                         alert("Por favor, preencha o campo \"Nome do dominio\".");
                         return false;
                     }
-                    if ($("#valorLim").val() == "")
+                    if ($("#valorLim").val() != "")
                     {
-                        alert("Por favor, preencha o campo \"Valor minimo\".");
-                        return false;
-                    }
-                    if ($("#valorLim").val() < 0)
-                    {
-                        alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
-                        return false;
-                    }
-                    if (!$.isNumeric($("#valorLim").val()))
-                    {
-                        alert("O valor do campo \"Valor minimo\" deve ser numérico.");
-                        return false;
+                      if ($("#valorLim").val() < 0)
+                        {
+                            alert("O valor do campo \"Valor minimo\" não pode ser negativo.");
+                            return false;
+                        }
+                         if (!$.isNumeric($("#valorLim").val()))
+                        {
+                            alert("O valor do campo \"Valor minimo\" deve ser numérico.");
+                            return false;
+                        }
                     }
                     return true;
                 }
