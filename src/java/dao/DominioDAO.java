@@ -24,8 +24,13 @@ public class DominioDAO {
     ArrayList<DominioBean> dom_list = new ArrayList<DominioBean>();
     ResultSet r;
     PreparedStatement statement;
-    dominio = dominio.replace("Ã§", "c");
-    dominio = dominio.replace("Ã£", "a");
+    dominio = dominio.replace("ç", "c");
+    dominio = dominio.replace("ã", "a");
+    dominio = dominio.replace("Ç", "c");
+    dominio = dominio.replace("Ã", "a");
+    dominio = dominio.replace("Ú", "u");
+    dominio = dominio.replace("ú", "u");
+    
     String SQL = "select * from ConsultaDominio('" +dominio+ "'," +valor+");";
  
     statement = connection.prepareStatement(SQL);
@@ -34,6 +39,7 @@ public class DominioDAO {
     while(r.next()) {
         DominioBean d = new DominioBean();
         //s = new DominioBean();
+        d.setNomeDominio(r.getString("dominio"));
         d.setNomePrograma(r.getString("nomePrograma"));
         d.setGasto(r.getFloat("gasto"));
         dom_list.add(d);

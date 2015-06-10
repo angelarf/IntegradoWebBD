@@ -10,9 +10,11 @@
         <title>Resultados Domínio</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
  	
+        
         <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js"></script>
+        
         <script type="text/javascript" charset="utf-8">
                  function verificaForm()
                 {
@@ -41,41 +43,21 @@
                         $('#tableresults').dataTable({
                             "bSort": false, // Disable sorting
                             "bInfo": false,
-                            "iDisplayLength": 9, //records per page
+                            "iDisplayLength": 8, //records per page
                             "sDom": "t<'row'<'col-md-6'i><'col-md-6'p>>",
                             //"sPaginationType": "bootstrap"
                         });
                         document.getElementById('tableresults').style.display='table';
                         
                 } );
-                function graf()
-                {
-                    document.getElementById('pagGrafico').style.display='inline';
-                    document.getElementById('bloqueio').style.display='inline';
-                    document.getElementById('imgfechar').style.display='inline';
-                    document.getElementById('fechar').style.display='inline';
-                }
-                function fechar()
-                {
-                    document.getElementById('pagGrafico').style.display='none';
-                    document.getElementById('bloqueio').style.display='none';
-                    document.getElementById('imgfechar').style.display='none';
-                    document.getElementById('fechar').style.display='none';
-                }
+         
         </script>
 
         
         
     </head>
     <body>
-        <div id="bloqueio">
-            <div id="pagGrafico">
-                
-            </div>
-            <div id="fechar">
-                <img id="imgfechar" src="imagens/close.png" onclick="fechar()"/>
-            </div>
-        </div>
+
         
         <article id="corpo">
             <header>
@@ -96,16 +78,10 @@
                 <a href="index.jsp">Ínicio</a>> <a href="paginas/pagDominio.jsp">Busca por Dominio</a>>
             </div>
             
-            
-            <a href="index.jsp">
-                 <button id="voltarBt">
-                    <img id="voltar" src="imagens/home.png"/>
-                    Home
-                 </button>
-            </a>
-            <div id="resultados">
+          
+            <div id="resultadosP">
                 <%
-                        DecimalFormat df = new DecimalFormat("#.00");
+                        DecimalFormat df = new DecimalFormat("#0.00");
                         df.setMaximumFractionDigits(2);
                         ArrayList<DominioBean> d_list = (ArrayList<DominioBean>)request.getAttribute("d_list");
                         //System.out.println("oobaa"+users.isEmpty());
@@ -121,7 +97,7 @@
                         <table id="tableresults">
                             <thead>
                                 <tr>
-                                    <th>Programa do Domínio</th><th>Gasto</th>
+                                    <th>Domínio</th><th>Programa</th><th>Gasto</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -137,7 +113,7 @@
                                 else    nome = "(sem nome)";
                             %>
                                <tr>
-                                    <td id="nomeprog"> <%= nome %> </td><td> <%= df.format(d.getGasto())%></td>
+                                   <td> <%=d.getNomeDomimio()%> </td><td> <%= nome %> </td><td>R$ <%= df.format(d.getGasto())%></td>
                                 </tr>
                             <% } %>
                             </tbody>
@@ -145,13 +121,14 @@
                     <% } %>
                     
             </div>
-
-                    <a href="#pagGrafico" onclick="graf()">
-                        <button id="grafico">
-                            <img id="graficoImg" src="imagens/grafico.png"/>
-                            <br>Gráficos
-                        </button>
-                    </a>
+            <div id ="botoes">
+                <a href="index.jsp">
+                    <button id="voltarBtP">
+                       <img id="voltar" src="imagens/home.png"/>
+                       Home
+                    </button>
+                </a>
+         </div>
         </article>
                     
         

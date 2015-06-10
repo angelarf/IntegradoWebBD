@@ -6,7 +6,8 @@
         <link rel="stylesheet" type="text/css" href="../css/busca.css"> 
         <title>Gasto por Programa</title>
         <link rel="shortcut icon" type="image/x-icon" href="../imagens/icon.ico">
-        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-2.1.3.min.js"></script>
+        <!--<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>-->
 
         <script>
             function verificaForm()

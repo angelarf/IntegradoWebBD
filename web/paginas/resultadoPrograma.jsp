@@ -8,8 +8,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/resultadoCss.css"> 
         <title>Resultados Programa</title>
-        <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
-        <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">        
+       <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
 
@@ -40,7 +40,7 @@
 
             // Set chart options
             var options = {'title':'Gastos dos programas',
-                           'width':1080,
+                           'width':800,
                            'height':540};
 
             // Instantiate and draw our chart, passing in some options.
@@ -157,13 +157,7 @@
             </div>
             
             
-            <a href="index.jsp">
-                 <button id="voltarBt">
-                    <img id="voltar" src="imagens/home.png"/>
-                    Home
-                 </button>
-            </a>
-            <div id="resultados">
+            <div id="resultadosP">
                 <%
                         DecimalFormat df = new DecimalFormat("#.00");
                         df.setMaximumFractionDigits(2);
@@ -179,26 +173,35 @@
                 %>
                         <table>
                             <tr>
-                                <th>Programa do Domínio</th><th>Gasto Total</th>
+                                <th>Domínio</th><th>Programa</th><th>Gasto Total</th>
                             </tr>
                             <%
                             for(ProgramaBean p: p_list){
                                 if (p.getNomePrograma().length() > 4){
                             %><tr>
-                                <td id="nomeprog"> <%= p.getNomePrograma()%> </td><td> <%= df.format(p.getGastoTotal())%></td>
+                                <td> <%=p.getNomeDominio()%> </td><td> <%= p.getNomePrograma()%> </td><td>R$ <%= df.format(p.getGastoTotal())%></td>
                             </tr>
                             <% }} %>
                         </table>
                     <% } %>
             
             </div>
-
-             <a href="#pagGrafico" onclick="graf()">
-                        <button id="grafico">
-                            <img id="graficoImg" src="imagens/grafico.png"/>
-                            <br>Gráficos
-                        </button>
-                    </a>
+            <div id="botoes"> 
+                <a href="index.jsp">
+                    <button id="voltarBtP">
+                       <img id="voltar" src="imagens/home.png"/>
+                       Home
+                    </button>
+               </a>
+               <% if(!p_list.isEmpty()){ %>           
+                <a href="#pagGrafico" onclick="graf()">
+                <button id="graficoP">
+                    <img id="graficoImg" src="imagens/grafico.png"/>
+                    <br>Gráficos
+                </button>
+                </a>
+                <% } %>
+            </div>
         </article>
 
         

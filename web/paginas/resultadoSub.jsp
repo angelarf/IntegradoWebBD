@@ -10,6 +10,8 @@
         <link rel="stylesheet" type="text/css" href="css/resultadoCss.css"> 
         <title>Resultados Subdomínio</title>
         <link rel="shortcut icon" type="image/x-icon" href="imagens/icon.ico">
+        
+        
         <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
@@ -34,14 +36,14 @@
                     for(SubdominioBean s: s_list){
                         if (s.getName().length() > 4){
                     %>
-                        ['<%=   s.getName().substring(0,5)%>', <%=    s.getGastoTotal()%>],
+                        ['<%=   s.getName().substring(0,4)%>', <%=    s.getGastoTotal()%>],
                 <% }} %>
               ['', 0]
             ]);
 
             // Set chart options
             var options = {'title':'Gastos dos programas',
-                           'width':1080,
+                           'width':800,
                            'height':540};
 
             // Instantiate and draw our chart, passing in some options.
@@ -160,20 +162,21 @@
                             for(SubdominioBean s: s_list){
                                 if (s.getName().length() > 4){
                             %><tr>
-                                <td id="nomeprog"> <%= s.getName()%> </td><td> <%= df.format(s.getGastoTotal())%></td>
+                                <td id="nomeprog"> <%= s.getName()%> </td><td>R$ <%= df.format(s.getGastoTotal())%></td>
                             </tr>
                             <% }} %>
                         </table>
                     <% } %>
                 
             </div>
-
+             <% if(!s_list.isEmpty()){ %>           
             <a href="#pagGrafico" onclick="graf()">
-                        <button id="grafico">
-                            <img id="graficoImg" src="imagens/grafico.png"/>
-                            <br>Gráficos
-                        </button>
-                    </a>
+                <button id="grafico">
+                    <img id="graficoImg" src="imagens/grafico.png"/>
+                    <br>Gráficos
+                </button>
+            </a>
+            <% } %>
         </article>
     </body>
 </html>

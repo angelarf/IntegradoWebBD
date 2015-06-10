@@ -2,6 +2,7 @@ package model;
 
 public class SubdominioBean {
   private String nomeSubdominio;
+  private String termo;
   private Float gastoTotal;   
   
  /* public SubdominioBean(){
@@ -22,4 +23,18 @@ public class SubdominioBean {
   public void setType(Float valor) {
     this.gastoTotal = valor;
   }*/
+
+    /**
+     * @return the termo
+     */
+    public String getTermo() {
+        return termo;
+    }
+
+    /**
+     * @param termo the termo to set
+     */
+    public void setTermo(String termo) {
+        this.termo = termo;
+    }
 }

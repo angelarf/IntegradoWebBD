@@ -23,16 +23,23 @@ public class ProgramaDAO {
     ArrayList<ProgramaBean> p_list = new ArrayList<ProgramaBean>();
     ResultSet r;
     PreparedStatement statement;
-    dominio = dominio.replace("Ã§", "c");
-    dominio = dominio.replace("Ã£", "a");
-    String SQL = "select * from Consulta2("+2+"," +valor+",'"+ordenacao.toLowerCase()+"');";
- 
+    //System.out.println(dominio);
+    dominio = dominio.replace("ç", "c");
+    dominio = dominio.replace("ã", "a");
+    dominio = dominio.replace("Ç", "c");
+    dominio = dominio.replace("Ã", "a");
+    dominio = dominio.replace("Ú", "u");
+    dominio = dominio.replace("ú", "u");
+    String SQL = "select * from ConsultaPrograma('"+dominio+"'," +valor+",'"+ordenacao+"');";
+        //System.out.println(dominio);
+
     statement = connection.prepareStatement(SQL);
     r = statement.executeQuery();
   
     while(r.next()) {
         ProgramaBean p = new ProgramaBean();
         //s = new DominioBean();
+        p.setNomeDominio(r.getString("dominio"));
         p.setNomePrograma(r.getString("descricao"));
         p.setGastoTotal(r.getFloat("total"));
         p_list.add(p);
